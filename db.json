@@ -1,0 +1,29 @@
+{
+    "bg" : "",
+    "title": "Arcade QUIZ",
+    "description" : "Um quiz divertido para os amantes dos consoles da velha guarda.",
+    "questions":[
+        {
+            "image": "",
+            "title" : "",
+            "description": "",
+            "answer" : 1,
+            "alternatives": [
+                "A 1",
+                "A 2"
+            ]
+        }
+    ],
+    "external": [],
+    "theme": {
+        "colors": {
+            "primary": "#263238",
+            "secondary" : "#78909c",
+            "mainBg": "#78909c",
+            "contrastText" : "#FFFFFF",
+            "wrong": "",
+            "success":""
+        },
+        "borderRadius": "4px"
+    }
+}

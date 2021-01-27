@@ -1,10 +1,29 @@
-import styled from 'styled-components'
-
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+import * as $ from '../src/styles/index.css.js'
+import Widget from '../src/components/Widget'
+import GitHubCorner from '../src/components/GitHubCorner';
+import Footer from '../src/components/Footer';
+import QuizBackground from '../src/components/QuizBackground'
 
 export default function Home() {
-  return <Title>My page</Title>
+  return (
+    <QuizBackground>
+      <$.QuizContainer>
+        <Widget>
+          <Widget.Header>
+            <h1>Arcade Quiz</h1>
+          </Widget.Header>
+          <Widget.Content>
+            <p>Lorem ipsum dolor sit</p>
+          </Widget.Content>
+        </Widget>
+        <Widget>
+          <Widget.Content>
+            <p>Lorem ipsum dolor sit</p>
+          </Widget.Content>
+        </Widget>
+        <Footer/>
+      </$.QuizContainer>
+      <GitHubCorner projectUrl="https://github.com/wesdrasalves"/>
+    </QuizBackground>
+  );
 }
