@@ -12,6 +12,11 @@ const AreaGame = styled.div`
     display:flex;
     justify-content:flex-end;
     align-items: flex-end;
+
+    @media(max-width: 1200px) {
+        display: none;
+    }
+  
 `;
 
 const Control = styled.div`
@@ -22,15 +27,16 @@ const Control = styled.div`
     background-repeat: no-repeat;
     margin-bottom:80px;
     opacity:20%;
+    
 `;
 
 const Game = () => (
   <>
     <AreaGame>
       <Control />
+      <EnemiesGroup />
+      <Player />
     </AreaGame>
-    <EnemiesGroup />
-    <Player />
 
   </>
 );

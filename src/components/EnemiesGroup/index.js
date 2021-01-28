@@ -15,6 +15,7 @@ const GroupEnemies = styled.div`
     width:800px;
     position:fixed;
     right:0px;
+    top:0px;
     margin-right:200px;
     height: 200px;
 `;

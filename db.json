@@ -1,7 +1,8 @@
 {
     "bg" : "https://www.oakbaynews.com/wp-content/uploads/2020/06/21690951_web1_200529-VNE-Quazars-Arcade-COVID_1.jpg",
+    "urlDeploy": "https://aluraquiz-arcade.wesdrasalves.vercel.app/",
     "title": "Arcade QUIZ",
-    "description" : "Um quiz divertido para os amantes dos consoles da velha guarda.",
+    "description" : "Um quiz divertido para os amantes do velho console Atari.",
     "questions":[
         {
             "image": "",
