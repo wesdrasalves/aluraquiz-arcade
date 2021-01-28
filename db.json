@@ -7,7 +7,7 @@
         {
             "image": "",
             "title" : "Qual foi o jogo mais vendido no atari?",
-            "description": "Só para começar.",
+            "description": "Só para começar, vamos lá.",
             "answer" : 1,
             "alternatives": [
                 "Pac-Man",
@@ -19,7 +19,7 @@
         {
             "image": "",
             "title" : "Em qual jogo foi criado o primeiro Easter Egg?",
-            "description": "Vamos descobrir quem foi o pioneiro nos Easter Egg.",
+            "description": "Vamos descobrir quem foi o pioneiro dos Easter Egg.",
             "answer" : 3,
             "alternatives": [
                 "Pitfall",
@@ -31,7 +31,7 @@
         {
             "image": "",
             "title" : "Qual jogo foi um fracasso e foi cedido para ser usado como aterro no deserto?",
-            "description": "De fato o jogo era ruim, rs.",
+            "description": "Realmente eu joguei e não era bom, rs.",
             "answer" : 4,
             "alternatives": [
                 "Q*bert",
@@ -55,7 +55,7 @@
         {
             "image": "",
             "title" : "Qual o primeiro jogo a usar password?",
-            "description": "Vamos descobrir quem foi o pioneiro nos Easter Egg.",
+            "description": "Isso foi o facilitador para os games.",
             "answer" : 1,
             "alternatives": [
                 "Survival Island",
@@ -67,7 +67,7 @@
         {
             "image": "",
             "title" : "O primeiro prêmio de Jogo do Ano foi dado a qual jogo?",
-            "description": "Não vai pesquisar no Google não hein.",
+            "description": "Vamos vê se vocês desconbrem essa.",
             "answer" : 4,
             "alternatives": [
                 "Adventure",
