@@ -50,7 +50,9 @@ export default function Home() {
         </Widget>
         <Widget>
           <Widget.Content>
-            <p>Lorem ipsum dolor sit</p>
+            <p>Quizes da Galera</p>
+            {/* eslint-disable-next-line max-len */}
+            <p>Deem uma olhada nos Quizes que a galera criou durante a Imersão React Next.js da Alura</p>
           </Widget.Content>
         </Widget>
         <Footer />

@@ -1,22 +1,35 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, {useState} from 'react';
 import Lottie from 'react-lottie';
+import styled from 'styled-components';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizContainer from '../src/components/QuizContainer';
 import Button from '../src/components/Button';
-import animation from '../src/lotties/18378-retro-game-loading-animation.json';
+import animationLoading from '../src/lotties/loading-animation.json';
+import animationCorrect from '../src/lotties/correct-animation.json';
+import animationError from '../src/lotties/error-animation.json';
+import atariBG from '../src/imgs/atari2600.png';
 
-const defaultOptions = {
+const defaultOptions = (animation) => ({
   loop: true,
   autoplay: true,
   animationData: animation,
   rendererSettings: {
     preserveAspectRatio: 'xMidYMid slice',
   },
-};
+});
+
+const PanelAnimation = styled.div`
+  width: 350px;
+  height: 150px;
+  position:absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+`;
 
 function LoadingWidget() {
   return (
@@ -27,7 +40,7 @@ function LoadingWidget() {
 
       <Widget.Content>
         <Lottie
-          options={defaultOptions}
+          options={defaultOptions(animationLoading)}
           height={100}
           width={200}
         />
@@ -36,6 +49,32 @@ function LoadingWidget() {
   );
 }
 
+const AnimationSucesso = () => (
+  <PanelAnimation>
+    <Lottie
+      options={defaultOptions(animationCorrect)}
+      height={100}
+      width={200}
+    />
+  </PanelAnimation>
+);
+
+const AnimationErro = () => (
+  <PanelAnimation>
+    <Lottie
+      options={defaultOptions(animationError)}
+      height={100}
+      width={200}
+    />
+  </PanelAnimation>
+);
+
+const questionStates = {
+  AGUARNDANDO: 'AGUARDANDO',
+  SUCESSO: 'SUCESSO',
+  ERRO: 'ERRO',
+};
+
 function QuestionWidget({
   question,
   questionIndex,
@@ -43,6 +82,9 @@ function QuestionWidget({
   onSubmit,
 }) {
   const questionId = `question__${questionIndex}`;
+  const [option, setOption] = useState(-1);
+  const [resultQuestion, setResult] = useState(questionStates.AGUARNDANDO);
+
   return (
     <Widget>
       <Widget.Header>
@@ -50,7 +92,8 @@ function QuestionWidget({
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
         </h3>
       </Widget.Header>
-
+      {resultQuestion === questionStates.SUCESSO && <AnimationSucesso /> }
+      {resultQuestion === questionStates.ERRO && <AnimationErro /> }
       <img
         alt="Descrição"
         style={{
@@ -58,7 +101,7 @@ function QuestionWidget({
           height: '150px',
           objectFit: 'cover',
         }}
-        src={question.image}
+        src={atariBG}
       />
       <Widget.Content>
         <h2>
@@ -71,7 +114,17 @@ function QuestionWidget({
         <form
           onSubmit={(infosDoEvento) => {
             infosDoEvento.preventDefault();
-            onSubmit();
+
+            if (question.answer === (option + 1)) {
+              setResult(questionStates.SUCESSO);
+            } else {
+              setResult(questionStates.ERRO);
+            }
+            setTimeout(() => {
+              setResult(questionStates.AGUARNDANDO);
+              setOption(-1);
+              onSubmit();
+            }, 4000);
           }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
@@ -85,6 +138,8 @@ function QuestionWidget({
                   id={alternativeId}
                   name={questionId}
                   type="radio"
+                  onChange={() => setOption(alternativeIndex)}
+                  checked={option === alternativeIndex}
                 />
                 {alternative}
               </Widget.Topic>
@@ -111,8 +166,6 @@ export default function QuizPage() {
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const questionIndex = currentQuestion;
   const question = db.questions[questionIndex];
-
-  console.log(question);
 
   React.useEffect(() => {
     setTimeout(() => {

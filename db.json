@@ -19,7 +19,7 @@
             "image": "",
             "title" : "Em qual jogo foi criado o primeiro Easter Egg?",
             "description": "Vamos descobrir quem foi o pioneiro nos Easter Egg.",
-            "answer" : 1,
+            "answer" : 3,
             "alternatives": [
                 "Pitfall",
                 "Donkey Kong",
@@ -31,7 +31,7 @@
             "image": "",
             "title" : "Qual jogo foi um fracasso e foi cedido para ser usado como aterro no deserto?",
             "description": "De fato o jogo era ruim, rs.",
-            "answer" : 1,
+            "answer" : 4,
             "alternatives": [
                 "Q*bert",
                 "Atlantis",
@@ -43,7 +43,7 @@
             "image": "",
             "title" : "Em qual ano foi criado o Atari?",
             "description": "Não vai pesquisar no Google não hein.",
-            "answer" : 1,
+            "answer" : 2,
             "alternatives": [
                 "1980",
                 "1977",
@@ -67,7 +67,7 @@
             "image": "",
             "title" : "O primeiro prêmio de Jogo do Ano foi dado a qual jogo?",
             "description": "Não vai pesquisar no Google não hein.",
-            "answer" : 1,
+            "answer" : 4,
             "alternatives": [
                 "Adventure",
                 "Pac-Man",
@@ -79,7 +79,7 @@
             "image": "",
             "title" : "Qual dessas pessoas foi funcionário da Atari?",
             "description": "Essa não é difícil.",
-            "answer" : 1,
+            "answer" : 3,
             "alternatives": [
                 "Shigeru Miyamoto",
                 "Larry Page",
