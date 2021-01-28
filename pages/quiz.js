@@ -1,21 +1,36 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import Lottie from 'react-lottie';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizContainer from '../src/components/QuizContainer';
 import Button from '../src/components/Button';
+import animation from '../src/lotties/18378-retro-game-loading-animation.json';
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: animation,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
 
 function LoadingWidget() {
   return (
     <Widget>
       <Widget.Header>
-        Carregando...
+        Voltando no tempo.
       </Widget.Header>
 
       <Widget.Content>
-        [Desafio do Loading]
+        <Lottie
+          options={defaultOptions}
+          height={100}
+          width={200}
+        />
       </Widget.Content>
     </Widget>
   );
@@ -31,7 +46,6 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
-        {/* <BackLinkArrow href="/" /> */}
         <h3>
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
         </h3>
@@ -68,7 +82,6 @@ function QuestionWidget({
                 htmlFor={alternativeId}
               >
                 <input
-                  // style={{ display: 'none' }}
                   id={alternativeId}
                   name={questionId}
                   type="radio"
@@ -77,10 +90,6 @@ function QuestionWidget({
               </Widget.Topic>
             );
           })}
-
-          {/* <pre>
-            {JSON.stringify(question, null, 4)}
-          </pre> */}
           <Button type="submit">
             Confirmar
           </Button>
@@ -95,6 +104,7 @@ const screenStates = {
   LOADING: 'LOADING',
   RESULT: 'RESULT',
 };
+
 export default function QuizPage() {
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const totalQuestions = db.questions.length;
@@ -102,16 +112,12 @@ export default function QuizPage() {
   const questionIndex = currentQuestion;
   const question = db.questions[questionIndex];
 
-  // [React chama de: Efeitos || Effects]
-  // React.useEffect
-  // atualizado === willUpdate
-  // morre === willUnmount
+  console.log(question);
+
   React.useEffect(() => {
-    // fetch() ...
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
-    }, 1 * 1000);
-  // nasce === didMount
+    }, 1 * 5000);
   }, []);
 
   function handleSubmitQuiz() {

@@ -5,21 +5,95 @@
     "questions":[
         {
             "image": "",
-            "title" : "",
-            "description": "",
+            "title" : "Qual foi o jogo mais vendido no atari?",
+            "description": "Só para começar.",
             "answer" : 1,
             "alternatives": [
-                "A 1",
-                "A 2"
+                "Pac-Man",
+                "Space Invaders",
+                "Enduro",
+                "Pitfall"
+            ]
+        },
+        {
+            "image": "",
+            "title" : "Em qual jogo foi criado o primeiro Easter Egg?",
+            "description": "Vamos descobrir quem foi o pioneiro nos Easter Egg.",
+            "answer" : 1,
+            "alternatives": [
+                "Pitfall",
+                "Donkey Kong",
+                "Adventure",
+                "Pac-Man"
+            ]
+        },
+        {
+            "image": "",
+            "title" : "Qual jogo foi um fracasso e foi cedido para ser usado como aterro no deserto?",
+            "description": "De fato o jogo era ruim, rs.",
+            "answer" : 1,
+            "alternatives": [
+                "Q*bert",
+                "Atlantis",
+                "Decathlon",
+                "E.T The Extra Terrestre"
+            ]
+        },
+        {
+            "image": "",
+            "title" : "Em qual ano foi criado o Atari?",
+            "description": "Não vai pesquisar no Google não hein.",
+            "answer" : 1,
+            "alternatives": [
+                "1980",
+                "1977",
+                "1975",
+                "1970"
+            ]
+        },
+        {
+            "image": "",
+            "title" : "Qual o primeiro jogo a usar password?",
+            "description": "Vamos descobrir quem foi o pioneiro nos Easter Egg.",
+            "answer" : 1,
+            "alternatives": [
+                "Survival Island",
+                "Q*bert",
+                "River Raid",
+                "Asteroids"
+            ]
+        },
+        {
+            "image": "",
+            "title" : "O primeiro prêmio de Jogo do Ano foi dado a qual jogo?",
+            "description": "Não vai pesquisar no Google não hein.",
+            "answer" : 1,
+            "alternatives": [
+                "Adventure",
+                "Pac-Man",
+                "Pitfall",
+                "Space Invaders"
+            ]
+        },
+        {
+            "image": "",
+            "title" : "Qual dessas pessoas foi funcionário da Atari?",
+            "description": "Essa não é difícil.",
+            "answer" : 1,
+            "alternatives": [
+                "Shigeru Miyamoto",
+                "Larry Page",
+                "Steve Jobs",
+                "Steve Wozniak"
             ]
         }
     ],
     "external": [],
     "theme": {
         "colors": {
-            "primary": "#263238",
-            "secondary" : "#78909c",
-            "mainBg": "#78909c",
+            "primary": "#212121",
+            "secondary" : "#424242",
+            "mainBg": "#757575",
             "contrastText" : "#FFFFFF",
             "wrong": "",
             "success":""
