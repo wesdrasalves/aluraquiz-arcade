@@ -15,7 +15,7 @@ const GroupEnemies = styled.div`
     width:800px;
     position:fixed;
     right:0px;
-    top:0px;
+    top:80px;
     margin-right:200px;
     height: 200px;
 `;
@@ -38,7 +38,7 @@ const EnemiesGroup = () => {
         enemies.push(<Enemie type={0} id={`inemie-${i}`} />);
       }
 
-      groups.push(<GroupRow>{enemies}</GroupRow>);
+      groups.push(<GroupRow key={column}>{enemies}</GroupRow>);
     }
 
     return groups;

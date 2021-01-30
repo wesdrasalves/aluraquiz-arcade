@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Lottie from 'react-lottie';
 import Widget from '../Widget';
 import Button from '../Button';
-import atariBG from '../../imgs/atari2600.png';
 import animationCorrect from '../../lotties/correct-animation.json';
 import animationError from '../../lotties/error-animation.json';
 import AternativesForm from '../AlternativesForm';
@@ -41,8 +40,8 @@ const AnimationErro = () => (
   <PanelAnimation>
     <Lottie
       options={defaultOptions(animationError)}
-      height={100}
-      width={200}
+      height={150}
+      width={150}
     />
   </PanelAnimation>
 );
@@ -60,7 +59,6 @@ export default function QuestionWidget({
   onSubmit,
   onSetResult,
 }) {
-  const questionId = `question__${questionIndex}`;
   const [option, setOption] = useState(undefined);
   const [statusResultQuestion, setStatusResult] = useState(questionStates.AGUARNDANDO);
   const [questionSubmit, setQuestionSubmit] = useState(undefined);
@@ -81,7 +79,7 @@ export default function QuestionWidget({
           height: '150px',
           objectFit: 'cover',
         }}
-        src={atariBG}
+        src={question.image}
       />
       <Widget.Content>
         <h2>
@@ -122,16 +120,8 @@ export default function QuestionWidget({
                 htmlFor={alternativeId}
                 data-selected={isSelected}
                 data-status={isSubmitQuestion && statusResultQuestion}
+                onClick={() => setOption(alternativeIndex)}
               >
-                <input
-                  id={alternativeId}
-                  name={questionId}
-                  type="radio"
-                    // eslint-disable-next-line react/no-array-index-key
-                  key={`opt_${alternativeIndex}`}
-                  onChange={() => setOption(alternativeIndex)}
-                  checked={isSelected}
-                />
                 {alternative}
               </Widget.Topic>
             );

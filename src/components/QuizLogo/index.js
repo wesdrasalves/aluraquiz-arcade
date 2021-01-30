@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Logo({ className }) {
+function LogoAlura({ className }) {
   return (
     <svg className={className} width="135" height="67" viewBox="0 0 135 67" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0)">
@@ -29,16 +29,31 @@ function Logo({ className }) {
   );
 }
 
-Logo.propTypes = {
+LogoAlura.propTypes = {
   className: PropTypes.string.isRequired,
 };
 
-const QuizLogo = styled(Logo)`
+const LogoAluraQuiz = styled(LogoAlura)`
   margin: auto;
   display: block;
   @media screen and (max-width: 500px) {
     margin: 0;
   }
 `;
+
+const Logo = styled.img`
+  width: 100px;
+`;
+
+const PanelLogos = styled.div`
+  display: flex;
+`;
+
+const QuizLogo = () => (
+  <PanelLogos>
+    <Logo src="/control.png" />
+    <LogoAluraQuiz />
+  </PanelLogos>
+);
 
 export default QuizLogo;

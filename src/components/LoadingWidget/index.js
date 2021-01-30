@@ -1,16 +1,8 @@
 import React from 'react';
 import Lottie from 'react-lottie';
 import animationLoading from '../../lotties/loading-animation.json';
+import defaultOptions from '../../lotties/lottieOptions';
 import Widget from '../Widget';
-
-const defaultOptions = (animation) => ({
-  loop: true,
-  autoplay: true,
-  animationData: animation,
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice',
-  },
-});
 
 export default function LoadingWidget() {
   return (

@@ -13,27 +13,42 @@ const AreaGame = styled.div`
     justify-content:flex-end;
     align-items: flex-end;
 
-    @media(max-width: 1200px) {
+    @media(max-width: 1450px) {
         display: none;
     }
   
 `;
 
 const Control = styled.div`
-    width: 200px;
-    height: 100px;
+    width: 150px;
+    height: 200px;
     background-image: url(${imgControl});
     background-size:contain;
     background-repeat: no-repeat;
-    margin-bottom:80px;
-    opacity:20%;
-    
+    margin-bottom:70px;
+    margin-right:30px;
+    opacity:70%;
+    color:#FFF;
+    display: flex;
+    align-items:flex-end;
+    text-align:center;
+`;
+
+const Title = styled.h2`
+  position:fixed;
+  top:10px;
+  right: 160px;
+  font-size:16px;
+  font-family: 'Press Start 2P', cursive;
 `;
 
 const Game = () => (
   <>
     <AreaGame>
-      <Control />
+      <Title>Um exempo de um dos jogos clássicos do Atari</Title>
+      <Control>
+        Use o direcional do teclado para mover o personagem e seta para cima para atirar.
+      </Control>
       <EnemiesGroup />
       <Player />
     </AreaGame>

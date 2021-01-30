@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 import imgEnemie from '../../imgs/player.png';
 import useKeyPress from '../../utils/domEvents';
@@ -22,26 +22,24 @@ const PlayerElement = styled.div`
 `;
 
 const Tiro = styled.div`
-    @keyframes movimentoTiro{
-        from {top: -10px};
-        to {top: -1000px}
-    }
-
+    top: ${(props) => props.positionTiro}px;
     width:5px;
     height: 20px;
     background: #FFF;
     position: absolute;
     left: ${(props) => props.position + 20}px;
-    animation: movimentoTiro 4s infinite;
 `;
 
 const Player = () => {
+  const postionInitialTiro = -1100;
   const [position, setPosition] = useState(0);
-  const [renderTiro, setRenderTiro] = useState(false);
   const ArrowRight = useKeyPress('ArrowRight');
   const ArrowLeft = useKeyPress('ArrowLeft');
-  const Space = useKeyPress('ArrowUp');
-  const [tiro, setElementTiro] = useState(undefined);
+  const ArrowUp = useKeyPress('ArrowUp');
+  const [positionTiro, setPositionTiro] = useState(postionInitialTiro);
+  const [startPositionTiro, setStartPositionTiro] = useState(postionInitialTiro);
+
+  const projetil = useRef(null);
 
   useEffect(() => {
     if (position > 0) {
@@ -56,25 +54,23 @@ const Player = () => {
   }, [ArrowRight]);
 
   useEffect(() => {
-    if (Space && !renderTiro) {
-      setRenderTiro(true);
-
-      setTimeout(() => {
-        setRenderTiro(false);
-        setElementTiro(undefined);
-      }, 2000);
+    if (ArrowUp && positionTiro <= postionInitialTiro) {
+      setPositionTiro(-10);
+      setStartPositionTiro(position);
     }
-  }, [Space]);
+  }, [ArrowUp]);
 
   useEffect(() => {
-    if (renderTiro && !tiro) {
-      setElementTiro(<Tiro position={position} />);
+    if (positionTiro > postionInitialTiro) {
+      setTimeout(() => {
+        setPositionTiro(positionTiro - 10);
+      }, 40);
     }
-  }, [renderTiro]);
+  }, [positionTiro]);
 
   return (
     <AreaPlayer>
-      {tiro}
+      <Tiro position={startPositionTiro} positionTiro={positionTiro} ref={projetil} />
       <PlayerElement position={position} />
     </AreaPlayer>
   );

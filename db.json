@@ -1,11 +1,11 @@
 {
-    "bg" : "https://www.oakbaynews.com/wp-content/uploads/2020/06/21690951_web1_200529-VNE-Quazars-Arcade-COVID_1.jpg",
+    "bg" : "/bg.jpg",
     "urlDeploy": "https://aluraquiz-arcade.wesdrasalves.vercel.app/",
-    "title": "Arcade QUIZ",
+    "title": "Atari QUIZ",
     "description" : "Um quiz divertido para os amantes do velho console Atari.",
     "questions":[
         {
-            "image": "",
+            "image": "/1.gif",
             "title" : "Qual foi o jogo mais vendido no atari?",
             "description": "Só para começar, vamos lá.",
             "answer" : 1,
@@ -17,7 +17,7 @@
             ]
         },
         {
-            "image": "",
+            "image": "/2.gif",
             "title" : "Em qual jogo foi criado o primeiro Easter Egg?",
             "description": "Vamos descobrir quem foi o pioneiro dos Easter Egg.",
             "answer" : 3,
@@ -29,7 +29,7 @@
             ]
         },
         {
-            "image": "",
+            "image": "/3.gif",
             "title" : "Qual jogo foi um fracasso e foi cedido para ser usado como aterro no deserto?",
             "description": "Realmente eu joguei e não era bom, rs.",
             "answer" : 4,
@@ -41,7 +41,7 @@
             ]
         },
         {
-            "image": "",
+            "image": "/8.gif",
             "title" : "Em qual ano foi criado o Atari?",
             "description": "Não vai pesquisar no Google não hein.",
             "answer" : 2,
@@ -53,7 +53,7 @@
             ]
         },
         {
-            "image": "",
+            "image": "/5.gif",
             "title" : "Qual o primeiro jogo a usar password?",
             "description": "Isso foi o facilitador para os games.",
             "answer" : 1,
@@ -65,7 +65,7 @@
             ]
         },
         {
-            "image": "",
+            "image": "/6.gif",
             "title" : "O primeiro prêmio de Jogo do Ano foi dado a qual jogo?",
             "description": "Vamos vê se vocês desconbrem essa.",
             "answer" : 4,
@@ -77,7 +77,7 @@
             ]
         },
         {
-            "image": "",
+            "image": "/7.gif",
             "title" : "Qual dessas pessoas foi funcionário da Atari?",
             "description": "Essa não é difícil.",
             "answer" : 3,
@@ -92,7 +92,7 @@
     "external": [],
     "theme": {
         "colors": {
-            "primary": "#212121",
+            "primary": "#263238",
             "secondary" : "#424242",
             "mainBg": "#757575",
             "contrastText" : "#FFFFFF",
