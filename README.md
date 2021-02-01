@@ -21,7 +21,7 @@
 
    <p align="center" style="display:flex; justify-content:space-around; ">
       <img src="https://raw.githubusercontent.com/wesdrasalves/aluraquiz-arcade/main/src/imgs/gif1.gif" width="40%" alt="Atari Quiz Demo"/>
-      <img src="https://raw.githubusercontent.com/wesdrasalves/aluraquiz-arcade/main/src/imgs/gi2.gif" width="40%" alt="Atari Quiz Demo 2"/>
+      <img src="https://raw.githubusercontent.com/wesdrasalves/aluraquiz-arcade/main/src/imgs/gif2.gif" width="40%" alt="Atari Quiz Demo 2"/>
    </p>
 
 <h2 align="center">Layout 🎨</h2>
