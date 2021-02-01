@@ -40,8 +40,8 @@ export default function App({ Component, pageProps }) {
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:title" content={db.title} />
         <meta property="og:description" content={db.description} />
-        <meta property="og:image" content="/gandalf.webp" />
-        <meta property="og:image:type" content={db.bg} />
+        <meta property="og:image" content={db.bg} />
+        <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1920" />
         <meta property="og:image:height" content="1080" />
         <meta property="og:type" content="website" />
